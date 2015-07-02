@@ -32,4 +32,4 @@ class Solution:
 
 sol = Solution()
 print sol.singleNumber([1,2,2,23,5,1,23])        
-        
+print sol.singleNumber([1,2,2,23,23,2,2,2,5,2,1,1,1])#如果是偶数次，也成立
