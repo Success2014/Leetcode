@@ -29,15 +29,43 @@ def climbStairs2(n):
         p = tmp
     return q
 
-def climbStairs3(n):
 
+class Solution:
+    # @param {integer} n
+    # @return {integer}
+    def climbStairs3(self, n):
+        if n == 0:
+            return 1
+        elif n == 1:
+            return 1
+        else:
+            res = 0
+            for i in xrange(n/2+1):
+                res += self.nChoosek(n-i,i)
+            return res
 
-def nChoosek(n,k):
+    def fact(self, n):
+        """return factorial of a non-negative number"""
+        res = 1
+        for i in xrange(1, n+1):
+            res *= i
+        return res
     
+    def nChoosek(self, n, k):
+        if n == 0:
+            return 0
+        elif k == 0:
+            return 1
+        else:
+            return self.fact(n)/self.fact(k)/self.fact(n-k)
 
 
 
-print climbStairs(0)
-print climbStairs(5)
-print climbStairs2(0)
-print climbStairs2(5)
+#print climbStairs(0)
+#print climbStairs(5)
+#print climbStairs2(0)
+#print climbStairs2(5)
+sol = Solution()
+#print sol.fact(0), sol.fact(4)
+#print sol.nChoosek(4,2), sol.nChoosek(5,1)
+print sol.climbStairs3(6)
