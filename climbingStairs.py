@@ -7,15 +7,37 @@ Created on Fri Jun 05 12:20:13 2015
 可以逆向来分析问题，如果有n个台阶，那么走完n个台阶的方式有f(n)种。
 而走完n个台阶有两种方法，先走完n-2个台阶，然后跨2个台阶；先走完n-1个台阶，
 然后跨1个台阶。所以f(n) = f(n-1) + f(n-2)。
+f(1)=1, f(2)=2.为了方便定义f(0)=1.
 
 @author: Neo
 """
 
 def climbStairs(n):
+    """定义一个数组来存储所有的数, O(n) space complexity"""
     dp = [1 for i in range(n + 1)]
     for i in xrange(2, n + 1):
         dp[i] = dp[i-1] + dp[i-2]
     return dp[n]
 
+def climbStairs2(n):
+    """bottom up, O(1) space complexity"""
+    p = 1 
+    q = 1
+    for i in xrange(2, n + 1):
+        tmp = q
+        q = p + tmp
+        p = tmp
+    return q
+
+def climbStairs3(n):
+
+
+def nChoosek(n,k):
+    
+
+
 
 print climbStairs(0)
+print climbStairs(5)
+print climbStairs2(0)
+print climbStairs2(5)
