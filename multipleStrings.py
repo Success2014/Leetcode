@@ -7,6 +7,13 @@ Given two numbers represented as strings, return multiplication of the numbers a
 Note: The numbers can be arbitrarily large and are non-negative.
 
 
+直接乘会溢出，所以每次都要两个single digit相乘，最大81，不会溢出。
+比如385 * 97, 就是个位=5 * 7，十位=8 * 7 + 5 * 9 ，百位=3 * 7 + 8 * 9 …
+可以每一位用一个Int表示，存在一个int[]里面。
+这个数组最大长度是num1.len + num2.len，比如99 * 99，最大不会超过10000，所以4位就够了。
+如果个位在后面的，最后相加时不好做，所以干脆先把string reverse了代码就清晰好多。
+最后结果前面的0要清掉。
+
 @author: Neo
 """
 
