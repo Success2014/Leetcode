@@ -12,6 +12,11 @@ anagram的意思是：abc，bac，acb就是anagram。即同一段字符串的字
 将这些都找出来。这里使用了哈希表，即Python中的dict。针对前面的例子来讲，
 映射为{abc：abc，bac，acb}。
 
+Tags: Hash Table String
+Similar Problems: (E) Valid Anagram
+
+
+
 idea:
 Use hash table, where the key is the sorted word.
 

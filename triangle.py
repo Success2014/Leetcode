@@ -43,7 +43,7 @@ class Solution:
         
         for i in xrange(1, len(triangle)):
             for j in xrange(len(triangle[i])-1, -1, -1): # triangle[i]!!!
-                if j == len(triangle[i]) - 1: #last one in a row only has 1 neigbor
+                if j == len(triangle[i]) - 1:#last one in a row only has 1 neigbor
                     res[j] = res[j-1] + triangle[i][j] 
                 elif j == 0: # first one in a row only has 1 neighbor
                     res[j] = res[j] + triangle[i][j]

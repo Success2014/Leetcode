@@ -18,11 +18,13 @@ Let’s assume p, q, r are the current, next, and next’s next node.
 We could swap the nodes pairwise by adjusting where it’s pointing next:
 q.next = p;
 p.next = r;
-The above operations transform the list from { p -> q -> r -> s } to { q -> p -> r -> s }.
-If the next pair of nodes exists, we should remember to connect p’s next to s. Therefore,
-we should record the current node before advancing to the next pair of nodes.
-To determine the new list’s head, you look at if the list contains two or more elements.
-Basically, these extra conditional statements could be avoided by inserting an extra node
+The above operations transform the list from { p -> q -> r -> s } to 
+{ q -> p -> r -> s }.
+If the next pair of nodes exists, we should remember to connect p’s next to s. 
+Therefore, we should record the current node before advancing to the next pair 
+of nodes. To determine the new list’s head, you look at if the list contains 
+two or more elements. Basically, these extra conditional statements could be 
+avoided by inserting an extra node
 (also known as the dummy head) to the front of the list.
 
 @author: Neo

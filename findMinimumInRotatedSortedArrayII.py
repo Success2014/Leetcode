@@ -16,9 +16,9 @@ The array may contain duplicates.
 
 solution:
 
-For case where AL == AM == AR, the minimum could be on AM’s left or right side (eg,
-[1, 1, 1, 0, 1] or [1, 0, 1, 1, 1]). In this case, we could not discard either subarrays and
-therefore such worst case degenerates to the order of O(n).
+For case where AL == AM == AR, the minimum could be on AM’s left or right side
+(eg, [1, 1, 1, 0, 1] or [1, 0, 1, 1, 1]). In this case, we could not discard 
+either subarrays and therefore such worst case degenerates to the order of O(n).
 不会出现[0,0,0,1,0]，因为不是sorted array
 
 @author: Neo
@@ -38,6 +38,7 @@ class Solution:
                 R = M
             else: # nums[L] = nums[M] = nums[R]
                 L += 1
+                R -= 1 # 这步可要可不要
         return nums[L]
 
 sol = Solution()    
@@ -45,3 +46,4 @@ print sol.findMin([6,7,1,2,3,4,5])
 print sol.findMin([4,5,6,7,1,2,3])
 print sol.findMin([1,3])        
 print sol.findMin([1, 1, 1, 0, 1]) # while判定没有等号的话，这个会出错
+print sol.findMin([1,3,3]) # while判定没有等号的话，这个会出错

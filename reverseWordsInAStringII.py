@@ -2,9 +2,10 @@
 """
 Created on Fri Jun 26 10:12:10 2015
 
-Similar to Question [6. Reverse Words in a String], but with the following constraints:
-“The input string does not contain leading or trailing spaces and the words are always
-separated by a single space.”
+Similar to Question [6. Reverse Words in a String], but with the following 
+constraints:
+“The input string does not contain leading or trailing spaces and the words 
+are always separated by a single space.”
 Could you do it in-place without allocating extra space?
 
 idea: 先把每个单词翻转，再把整个句子翻转。或者先把整个句子翻转，再把每个单词翻转。
@@ -38,6 +39,7 @@ class Solution:
             if s[j].isspace() or j == len(s) -1:
                 self.rev(s,i,j)
                 i = j + 1
+        return s
         
     def rev(self, s, begin, end):
         for i in xrange(0, (end-begin)/2):
@@ -46,6 +48,6 @@ class Solution:
             s[end - i] = tmp
         
 
-s = " a"            
+s = "the sky is blue"           
 sol = Solution()        
-sol.reverseWords(" a")
+print sol.reverseWords(s)

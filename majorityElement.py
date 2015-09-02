@@ -8,6 +8,8 @@ The majority element is the element that appears more than ⌊ n/2 ⌋ times.
 You may assume that the array is non-empty and the majority element always 
 exist in the array.
 
+Tags: Divide and Conquer Array Bit Manipulation
+Similar Problems (M) Majority Element II
 
 
 Answers:
@@ -70,7 +72,10 @@ class Solution:
     """
     思想可以延伸到出现次数大于n/k的情况（当然基于hash的方法也可以）
     """
-    def majorityElement2(self, nums): # moore voting algorithm, count must be >0 at last
+    def majorityElement2(self, nums): 
+        """moore voting algorithm, count must be > 0 at last
+        最多只有1个这样的数。[n/2]=n/2 or (n-1)/2.大于[n/2],则需要
+        (n/2 + 1) or (n+1)/2.两个这样的数则总共需要(n+2) or (n+1)个数。"""
         if len(nums) == 1:
             return nums[0]
         count = 0

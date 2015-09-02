@@ -2,11 +2,23 @@
 """
 Created on Tue Jun 09 15:20:37 2015
 
+Given two sorted integer arrays nums1 and nums2, merge nums2 into 
+nums1 as one sorted array.
+
+Note:
+You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.
+
+Tags Array Two Pointers
+Similar Problems (E) Merge Two Sorted Lists
+
+
 合并A、B两个有序数组到A中。
 从前向后放不行，那就从后向前放吧
 Merge from the back to make use of the space.
 Put the bigger value at the end.
 Don't forget to merge the remaining elements.
+
+
 
 @author: Neo
 """

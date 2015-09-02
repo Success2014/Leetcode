@@ -3,8 +3,12 @@
 Created on Wed Jun 17 18:00:57 2015
 
 Merge two sorted linked lists and return it as a new list. 
-The new list should be made by splicing together the nodes of the first two lists.
+The new list should be made by splicing together the nodes of the first two 
+lists.
 
+idea:
+就像把两个有序数组变成一个有序数组。
+挨个比较，小的添加到新的数组末尾。
 
 @author: Neo
 """

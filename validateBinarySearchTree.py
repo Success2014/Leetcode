@@ -20,13 +20,14 @@ Be care of:
 
 idea:
 O(n) runtime, O(n) stack space – Top-down recursion:
-We can avoid examining all nodes of both subtrees in
-each pass by passing down the low and high limits from the parent to its children.
-Refer back to the binary tree above. As we traverse down the tree from node (10) to
-right node (15), we know for sure that the right node’s value fall between 10 and +inf.
-Then, as we traverse further down from node (15) to left node (6), we know for sure that
-the left node’s value fall between 10 and 15. And since (6) does not satisfy the above
-requirement, we can quickly determine it is not a valid BST.
+We can avoid examining all nodes of both subtrees in each pass by passing down 
+the low and high limits from the parent to its children.
+Refer back to the binary tree above. As we traverse down the tree from node 
+(10) to right node (15), we know for sure that the right node’s value fall 
+between 10 and +inf. Then, as we traverse further down from node (15) to left 
+node (6), we know for sure that the left node’s value fall between 10 and 15. 
+And since (6) does not satisfy the above requirement, we can quickly determine 
+it is not a valid BST.
 
 @author: Neo
 """

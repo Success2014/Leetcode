@@ -9,6 +9,12 @@ and it should return false if every element is distinct.
 Possible solutions:
 https://leetcode.com/discuss/37219/possible-solutions
 
+
+Tags: Array Hash Table
+Similar Problems: (E) Contains Duplicate II (M) Contains Duplicate III
+
+
+
 @author: Neo
 """
 

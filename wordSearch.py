@@ -4,7 +4,9 @@ Created on Mon Jul 13 10:27:54 2015
 
 Given a 2D board and a word, find if the word exists in the grid.
 
-The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
+The word can be constructed from letters of sequentially adjacent cell, 
+where "adjacent" cells are those horizontally or vertically neighboring. 
+The same letter cell may not be used more than once.
 
 For example,
 Given board =
@@ -25,6 +27,13 @@ Similar Problems: (H) Word Search II
 
 Idea:
 Use DFS.
+先找到word的第一个字母，然后再上下左右看，能不能找到下一个字母。
+能的话就recurse下去。
+都不能的话就不能了。
+记得把用过的字母先用一个placeholder代替，如果从那个位置recurse不下去，记得
+把这个字母换回来。
+
+
 
 注意：
 tmp, board[x][y] = board[x][y], "#" 
@@ -49,8 +58,9 @@ class Solution:
         
         
     def dfs(self, board, x, y, word):
-        """x,y is the position on board. Look up, down, left, right. If matches,
-        change it to # so that in later recursion, it will not be used again."""
+        """x,y is the position on board. Look up, down, left, right. If 
+        matches, change it to # so that in later recursion, it will not be 
+        used again."""
         #base case
         if len(word) == 0:
             return True

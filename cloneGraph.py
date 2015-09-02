@@ -27,6 +27,10 @@ Visually, the graph looks like the following:
     0 --- 2
          / \
          \_/
+
+Tags: Depth-first Search Breadth-first Search Graph
+Similar Problems: (H) Copy List with Random Pointer
+
          
 
 Solution:

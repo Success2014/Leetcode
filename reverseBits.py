@@ -12,12 +12,15 @@ Read from the back to the front.
 Follow up:
 If this function is called many times, how would you optimize it?
 
+Tags: Bit Manipulation
+Similar Problems (E) Number of 1 Bits
 
 Fast idea:
 
 The key idea of the optimization is to look up a 4 bit chuck and find out
 what the reverse is. For example, reverse of 0001 is 1000 (in decimal reverse 
-of 1 is 8). Another example, reverse of 1010 is 0101, meaning reverse of 10 is 5.
+of 1 is 8). Another example, reverse of 1010 is 0101, meaning reverse of 10 is 
+5.
 
 Based on this idea we could create a look up table:
 value -> reverse
@@ -26,7 +29,8 @@ value -> reverse
 ... ------> ...
 15 ------> 15
 
-This can be further optimized by using bytes lookup table of size 256 for 8 bits.
+This can be further optimized by using bytes lookup table of size 256 for 8 
+bits.
 This is a trade-off between time complexity and space complexity.
 But I am too lazy to generate the table. Note, place the table 
 initialization outside the reverseBits() routine is necessary for performance.
@@ -38,6 +42,9 @@ performance difference is not dramatic though.
 During each iteration, shift the output 4 bits to the left, and discard the 
 lowest 4 bits from the input. Make sure the reverse of current lowest 4 bits 
 is saved to the current highest 4 bits in the output.
+
+
+
 
 
 @author: Neo

@@ -15,6 +15,11 @@ Sort the array.
 Use a variable mindf to track the minimum difference.
 Use two pointers. If == target, return; > target, right--; < target, left++;
 
+Tags: Array Two Pointers
+Similar Problems: (M) 3Sum
+
+
+
 @author: Neo
 """
 
@@ -47,6 +52,7 @@ class Solution:
 sol = Solution()                    
 #print sol.threeSumClosest([-1, 2, 1, -4], 1)
 #print sol.threeSumClosest([0,1,2], 0)  
-print sol.threeSumClosest([1,2,4,8,16,32,64,128], 82)                    
+#print sol.threeSumClosest([1,2,4,8,16,32,64,128], 82)                    
+print sol.threeSumClosest([0,-1,2], 2)  
                     
                     

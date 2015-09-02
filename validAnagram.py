@@ -2,6 +2,20 @@
 """
 Created on Sat Aug 01 17:08:22 2015
 
+Given two strings s and t, write a function to determine if t is an anagram of 
+s.
+
+For example,
+s = "anagram", t = "nagaram", return true.
+s = "rat", t = "car", return false.
+
+Note:
+You may assume the string contains only lowercase alphabets.
+
+Tags Hash Table Sort
+Similar Problems (M) Group Anagrams
+
+
 @author: Neo
 """
 

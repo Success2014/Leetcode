@@ -42,23 +42,22 @@ class Solution:
             return L + 1
         else:
             return L
-            
     def searchInsert2(self, nums, target):
+        """iterative的另一种实现。观察几个例子想出来的。"""
         L = 0
         R = len(nums) - 1
-        while L < R:
+        while L <= R:
             M = (L + R) / 2
             if nums[M] == target:
                 return M
             elif nums[M] < target:
                 L = M + 1
             else:
-                R = M
-        if nums[L] < target:
-            return L + 1
-        else:
-            return L
-    def searchInsert3(self, nums, target):
+                R = M - 1
+        return L
+            
+    
+    def searchInsertRec(self, nums, target):
         """recursive"""
         L = 0
         R = len(nums) - 1
@@ -79,5 +78,5 @@ class Solution:
             return self.search(nums, target, L, M)
                 
 sol = Solution()
-print sol.searchInsert3([1,3,5],0)
+print sol.searchInsert2([1,3,5],0)
                 

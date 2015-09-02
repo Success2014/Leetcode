@@ -4,6 +4,9 @@ Created on Wed Jul 01 17:32:03 2015
 Given a singly linked list where elements are sorted in ascending order, 
 convert it to a height balanced BST.
 
+Tags: Depth-first Search Linked List
+Similar Problems: (M) Convert Sorted Array to Binary Search Tree
+
 
 IMP:
 In linked list, you no longer have random access to an element in O(1) time.

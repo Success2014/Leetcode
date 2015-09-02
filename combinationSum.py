@@ -17,6 +17,10 @@ A solution set is:
 [7] 
 [2, 2, 3] 
 
+Tags: Array Backtracking
+Similar Problems: (M) Letter Combinations of a Phone Number 
+(M) Combination Sum II (M) Combinations (M) Combination Sum III
+
 
 @author: Neo
 """
@@ -45,7 +49,8 @@ class Solution:
     
     
     def combinationSum2(self, candidates, target):
-        """DFS. Use a stack. total is the sum up to now. start is the starting point,
+        """DFS. Use a stack. total is the sum up to now. 
+        start is the starting point,
         no need to look at the old numbers.
         res is a list to tracking the progress."""
         candidates.sort()

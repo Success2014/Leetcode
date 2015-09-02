@@ -19,7 +19,9 @@ class Solution:
     # @param {integer[][]} matrix
     # @return {void} Do not return anything, modify matrix in-place instead.
     def setZeroes(self, matrix):
-        """O(m + n) space solution"""
+        """O(m + n) space solution. Two passes. First pass records which
+        rows and columns have zeros. Second pass set matrix[i][j] to be 0
+        if i-th row or j-th column has zero."""
         m = len(matrix)
         n = len(matrix[0])
         row = [False for i in range(m)]

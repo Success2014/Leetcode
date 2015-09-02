@@ -17,9 +17,12 @@ begin to intersect at node c1.
 Notes:
 
 If the two linked lists have no intersection at all, return null.
-The linked lists must retain their original structure after the function returns.
+The linked lists must retain their original structure after the function 
+returns.
 You may assume there are no cycles anywhere in the entire linked structure.
 Your code should preferably run in O(n) time and use only O(1) memory.
+
+Tags: Linked List
 
 idea:
 首先这道题目有他的特殊性，这个特殊性就在这里的两个链表如果有交集的话，
@@ -55,7 +58,8 @@ idea:
 所以当pA/pB到达链表末尾时，分别记录下A和B的最后一个节点。
 如果两个链表的末尾节点不一致，说明两个链表没有交点。
 
-如果假设，pA已经走完了A， pB已经走了B和A开头的部分，这个算法其实和自己的idea是一样的。
+如果假设，pA已经走完了A， pB已经走了B和A开头的部分，这个算法其实和自己的
+idea是一样的。
 
 
 @author: Neo

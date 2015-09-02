@@ -9,6 +9,10 @@ single digit. Add the two numbers and return it as a linked list.
 Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 Output: 7 -> 0 -> 8
 
+Tags: Linked List Math
+Similar Problems: (M) Multiply Strings (E) Add Binary
+
+
 solution:
 Keep track of the carry using a variable and simulate digits-by-digits sum from the head
 of list, which contains the least-significant digit.

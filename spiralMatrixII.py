@@ -68,6 +68,6 @@ class Solution:
                 
                 
 sol = Solution()
-print sol.generateMatrix(1)
+print sol.generateMatrix(4)
                 
                 

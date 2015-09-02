@@ -58,6 +58,15 @@ class Solution:
         for e in s:
             ans = ans * 26 + ord(e) - ord('A') + 1
         return ans
+    def titleToNumber4(self, s):
+        """从后往前"""
+        res = 0
+        power = 0
+        for i in xrange(len(s)-1,-1,-1):
+            res += (ord(s[i]) - ord('A') + 1) * (26**power)
+            power += 1
+        
+        return res
 
 sol = Solution()
 print sol.titleToNumber3("AAA")

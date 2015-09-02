@@ -2,10 +2,19 @@
 """
 Created on Tue Jun 09 15:43:32 2015
 
+Given two binary trees, write a function to check if they are equal or not.
+
+Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
+
+Tags Tree Depth-first Search
+
+
 题意：判断两棵树是否是同一棵树。
 
 解题思路：这题比较简单。
 用递归来做。首先判断两个根节点的值是否相同，如果相同，递归判断根的左右子树。
+
+
 
 @author: Neo
 """

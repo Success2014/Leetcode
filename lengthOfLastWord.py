@@ -28,5 +28,7 @@ def lengthOfLastWord2(s):
     return i - j if i >= 0 else 0
 
 
-s = "a"    
-print lengthOfLastWord2(s)
+s1 = "a"    
+s2 = " "
+print lengthOfLastWord2(s1)
+print lengthOfLastWord(s2)

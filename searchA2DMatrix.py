@@ -18,6 +18,9 @@ Consider the following matrix:
 ]
 Given target = 3, return true.
 
+Tags: Array Binary Search
+Similar Problems: (M) Search a 2D Matrix II
+
 
 @author: Neo
 """
@@ -77,9 +80,9 @@ matrix = [
   [10, 11, 16, 20],
   [23, 30, 34, 50]
 ]
-matrix2 = [[1]]
+matrix2 = [[1]] 
 print sol.searchMatrix(matrix,3)
-print sol.searchMatrix2(matrix2,0)
+print sol.searchMatrix2(matrix2,0) # row = -1
         
         
         

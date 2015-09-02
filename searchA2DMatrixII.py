@@ -22,8 +22,8 @@ Given target = 5, return true.
 
 Given target = 20, return false.
 
-Hide Tags Divide and Conquer Binary Search
-Hide Similar Problems (M) Search a 2D Matrix
+Tags Divide and Conquer Binary Search
+Similar Problems (M) Search a 2D Matrix
 
 
 

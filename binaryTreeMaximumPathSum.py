@@ -13,9 +13,13 @@ Given the below binary tree,
      2   3
 Return 6.
 
+Tags: Tree Depth-first Search
+Similar Problems: (E) Path Sum (M) Sum Root to Leaf Numbers
+
+
     1
    / \
-  2  4
+  2   4
  / \
 2   3
 return 10.
@@ -52,6 +56,12 @@ calculation, bottom up approach usually is able to be more efficient.
 层层累积到最上面，有可能得到最大，也有可能在下面的子树得到最大7->6->5.
 层层累积的过程中，左右两条路径的值，只有一条能被返回。
 
+        1
+      /   \
+    -2      3
+   / \     / \
+ 100   4   1   2
+这样的情况也能找到左下角那个节点。
 
 @author: Neo
 """

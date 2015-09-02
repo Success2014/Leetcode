@@ -8,14 +8,15 @@ Find that single one.
 Your algorithm should have a linear runtime complexity. 
 Could you implement it without using extra memory?
 
-用Hash table,一个一个放进去，看到重复就pop，这样到最后就只剩一个。但是这样做用了extra memeory.
+用Hash table,一个一个放进去，看到重复就pop，这样到最后就只剩一个。
+但是这样做用了extra memeory.
 
 Solution:
 
 XOR-ing a number with itself is zero. If we XOR all numbers together, it would
-effectively cancel out all elements that appear twice leaving us with only the single
-number. As the XOR operation is both commutative and associative, the order in how
-you XOR them does not matter.
+effectively cancel out all elements that appear twice leaving us with only the 
+single number. As the XOR operation is both commutative and associative, the 
+order in how you XOR them does not matter.
 
 @author: Neo
 """

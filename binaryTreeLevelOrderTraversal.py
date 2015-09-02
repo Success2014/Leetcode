@@ -19,6 +19,12 @@ return its level order traversal as:
   [15,7]
 ]
 
+Tags: Tree Breadth-first Search
+Similar Problems: (M) Binary Tree Zigzag Level Order Traversal 
+(E) Binary Tree Level Order Traversal II (E) Minimum Depth of Binary Tree
+
+
+
 
 idea: BFS. If encounter a None, then current level ends.
 

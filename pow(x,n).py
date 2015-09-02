@@ -22,7 +22,6 @@ class Solution:
             return self.myPow(x*x, n/2)
         else:
             return self.myPow(x*x, n/2)*x
-        return x*self.myPow(x,n-1)
 
 
 

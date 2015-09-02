@@ -19,7 +19,8 @@ The solution set must not contain duplicate triplets.
 然后从左到右看每一个数num[i],找它右边是否有两个数之和为-num[i], O(n2).
 注意，重复的不用看了。
 
-
+Tag: Array, Two Pointers
+Similar Problems: (M) Two sum (M) 3Sum Closest (M) 4Sum 
 
 @author: Neo
 """

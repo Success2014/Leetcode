@@ -7,6 +7,11 @@ characters. For example, the longest substring without repeating letters
 for "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest 
 substring is "b", with the length of 1.
 
+
+Tags: Hash Table Two Pointers String
+Similar Problems (H) Longest Substring with At Most Two Distinct Characters
+
+
 @author: Neo
 """
 
@@ -14,8 +19,8 @@ class Solution:
     # @param {string} s
     # @return {integer}
     def lengthOfLongestSubstring(self, s):
-        """两个指针i,j。注意碰到重复时,指针i后，新的i前都需要在dict里清掉,清的时候把该清的
-        清掉，该留的留下"""
+        """两个指针i,j。注意碰到重复时,指针i后，新的i前都需要在dict里清掉,
+        清的时候把该清的清掉，该留的留下"""
         if not s:
             return 0
         i = 0
@@ -38,9 +43,12 @@ class Solution:
             j += 1        
         return maxlen
     def lengthOfLongestSubstring2(self, s):
-        """每次都跟cur当前比。
-        cur是当前最长长度，没有重复就直接加1.如果遇到重复，要么就是两个重复的字母的
-        距离，要么这个距离太长，就是当前距离加1"""
+        """每次res都跟cur当前比。
+        cur是当前最长长度，如何更新？
+        没有重复就直接加1.
+        如果遇到重复，要么就是两个重复的字母的距离；
+        要么这个距离里面包含其他重复的字母，太长，就得用当前距离加1。
+        比如txmmzxt"""
         d = {}
         res = 0
         cur = 0 # current max length
@@ -59,6 +67,6 @@ sol = Solution()
 print sol.lengthOfLongestSubstring2("abcefcgcilmno")  
 print sol.lengthOfLongestSubstring2("eee")      
 print sol.lengthOfLongestSubstring2("au")
-print sol.lengthOfLongestSubstring2("tmmzuxt")
+print sol.lengthOfLongestSubstring2("tmmzuxt")#t就是为什么要用min(cur+1,..)
 print sol.lengthOfLongestSubstring2("aaca")
 print sol.lengthOfLongestSubstring2("ejtdfngsdnnkgpkvtigsq")

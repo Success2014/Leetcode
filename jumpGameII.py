@@ -21,7 +21,8 @@ The minimum number of jumps to reach the last index is 2.
 idea:
 res: step needed
 cur: how far we can reach now using res steps
-nxt: how far we can reach next using res+1 steps
+nxt: how far we can reach next using res+1 steps calculating based on
+current value of nums
 
 
     [2, 1, 2, 3, 1, 1, 1]
@@ -41,18 +42,23 @@ class Solution:
         cur = 0
         nxt = 0
         for i in xrange(len(nums)):
-            if i > cur: # nothing needed when i <= cur
+            # when i > cur, you need to take another step.
+            # so res + 1, and update cur as nxt
+            # nothing needed when i <= cur, this is greedy.
+            # Use minimum steps to go furthest.
+            if i > cur: 
                 res += 1
                 cur = nxt
-            nxt = max(nxt, i + nums[i])
+            nxt = max(nxt, i + nums[i]) # this is also greedy
             if cur >= len(nums) - 1:
                 return res
 #        return res
 
 
 sol = Solution()        
-print sol.jump([2, 1, 2, 3, 1, 1, 1])
-print sol.jump([2,3,1,1,4])            
+#print sol.jump([2, 1, 2, 3, 1, 1, 1])
+#print sol.jump([2,3,1,1,4])            
+print sol.jump([1,2,4,3,6,5,6,1,4,1,1,1,1,1,2])
         
         
         

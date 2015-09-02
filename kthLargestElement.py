@@ -12,8 +12,9 @@ Note:
 You may assume k is always valid, 1 ≤ k ≤ array's length.
 
 idea:
-quick select, not in place
-random select, in place
+quick select, not in place, O(n)
+random select, in place, O(n)
+sort: O(nlogn)
 
 @author: Neo
 """
@@ -22,7 +23,8 @@ class Solution:
     # @param {integer[]} nums
     # @param {integer} k
     # @return {integer}
-    def findKthLargest(self, nums, k):        
+    def findKthLargest(self, nums, k):
+        """Use a pivot."""
         if not nums:
             return None
         if len(nums) == 1:

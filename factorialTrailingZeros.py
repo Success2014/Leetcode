@@ -5,6 +5,10 @@ Created on Mon Jun 15 20:47:52 2015
 Given an integer n, return the number of trailing zeroes in n!.
 Note: Your solution should be in logarithmic time complexity.
 
+Tags: Math
+Similar Problems: (M) Number of Digit One
+
+
 
 朴素解法：
 首先求出n!，然后计算末尾0的个数。（重复÷10，直到余数非0）

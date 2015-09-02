@@ -36,7 +36,7 @@ class Solution:
         return True
     
     '''
-    逆向思维，反着堆上去
+    逆向思维，反着堆上去.假设都是质数，然后再把非质数一一去除。
     '''    
     def countPrimes(self, n):
         if n < 3:
@@ -44,12 +44,14 @@ class Solution:
         primes = [0,0] + [1]*(n-2) # total length is n
         for i in xrange(2, int(n**0.5)+1):
             if primes[i] == 1:
+                #不需要从i*2,i*3开始，因为2*i,3*i已经被置0了
                 for j in xrange(i*i, n, i):
                     primes[j] = 0
     
         return sum(primes)
         
 sol = Solution()
+print sol.countPrimes(20)
 print sol.countPrimes(0)
 print sol.countPrimes(4)        
 print sol.countPrimes(5)        

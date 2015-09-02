@@ -8,6 +8,10 @@ Example
 Given: 1 --> 2 --> 6 --> 3 --> 4 --> 5 --> 6, val = 6
 Return: 1 --> 2 --> 3 --> 4 --> 5
 
+Tags: Linked List
+Similar Problems (E) Remove Element (E) Delete Node in a Linked List
+
+
 Solution: 使用指针，注意头结点，涉及到链表的题大抵离不开这两点。
 
 @author: Neo
@@ -33,6 +37,7 @@ class Solution:
         while nxt is not None:
             if nxt.val == val:
                 nxt = nxt.next
+                #curt remain unchanged, temporarily set curt.next
                 curt.next = nxt
             else:
                 curt = nxt

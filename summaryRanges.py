@@ -34,13 +34,21 @@ class Solution:
         """https://leetcode.com/discuss/42199/6-lines-in-python
         holding the current range in an extra variable r to make things easier.
         Note that r contains at most two elements, so the in-check takes 
-        constant time."""
+        constant time. Complexity is O(n). Although 'in' usually takes O(n) 
+        time, here r has only 2 elements, 'in' takes constant time."""
         ranges, r = [], []
         for n in nums:
             if n-1 not in r:
                 r = []
-                ranges += r,
-            r[1:] = n,
+                ranges += r, # 逗号神奇
+            r[1:] = n, # 这个逗号太神奇了
+            ### That's the best part of the whole solution :-). 
+            ### It replaces the slice on the left side by the (elements of the)
+            ### tuple on the right side. So it replaces everything after the
+            ### first element in r (or everything, in case r is empty) by just n. 
+            ### That is, [] becomes [n] (setting the start value of the range), 
+            ### and [x] and [x,y] both become [x,n] (adding/updating the end value 
+            ###     of the range).
         return ['->'.join(map(str, x)) for x in ranges]
 
 

@@ -15,6 +15,8 @@ it is the fifth second-level revision of the second first-level revision.
 Here is an example of version numbers ordering:
 0.1 < 1.1 < 1.2 < 13.37
 
+Tags: string
+
 Note:
 
 how to compare "0.1" and "0.0.1"

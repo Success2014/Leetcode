@@ -12,6 +12,10 @@ Given a list of non-negative integers representing the amount of
 money of each house, determine the maximum amount of money you can
 rob tonight without alerting the police.
 
+Tags: Dynamic Programming
+Similar Problems (M) House Robber II
+
+
 动态规划（Dynamic Programming）
 
 状态转移方程：
@@ -34,7 +38,7 @@ class Solution:
         return dp[size]
     
     """
-    观察可知，上述代码的空间复杂度可以进一步化简为O(1)：
+    观察可知，上述代码的空间复杂度可以进一步化简为O(1).只需要两个变量来更新最大值。
     """
     def rob2(self, nums):
         size = len(nums)

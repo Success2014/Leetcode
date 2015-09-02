@@ -33,7 +33,8 @@ class Solution:
                 return d[key]
     
     def singleNumber2(self, nums):
-        """http://liangjiabin.com/blog/2015/03/leetcode-single-number-ii-in-python.html
+        """
+        http://liangjiabin.com/blog/2015/03/leetcode-single-number-ii-in-python.html
         32位整数逐位计算，把数组中所有数的第i位加起来，模3得到的1或0便是x第i位的值。
         如数组[2, 2, 2, 1]，二进制位[10, 10, 10, 01]，最低位加起来是1，模3得1，
         第二位加起来是3，模3得0，所以要找的数为二进制01，即1。        
@@ -46,7 +47,7 @@ class Solution:
             for num in nums:
                 if num < 0:
                     neg += 1
-                    num = ~(num - 1)
+                    num = ~(num - 1)#对负数减1取反
                 sums += (num >> i) & 1
                 sums %= 3
             res |= (sums & 1) << i
@@ -61,8 +62,9 @@ class Solution:
         three = 0
         for i in range(len(nums)):
             two |= nums[i] & one #two为1时，不管A[i]为什么，two都为1
-            one = nums[i] ^ one  #异或操作，都是1就进位
-            three = one & two #以下三步的意思是：如果one和two都为1时，就清0，反之则保持原来状态。            
+            one = nums[i] ^ one  #异或操作，取nums[i]的值
+            #以下三步的意思是：如果one和two都为1时，就清0，反之则保持原来状态。            
+            three = one & two 
             one &= ~three
             two &= ~three
         return one
@@ -72,7 +74,7 @@ class Solution:
 
 
 sol = Solution()
-print sol.singleNumber3([2,2,2,1])        
+print sol.singleNumber3([8,8,8,1])        
         
         
         

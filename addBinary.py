@@ -2,7 +2,18 @@
 """
 Created on Fri Jun 05 10:23:34 2015
 
-a,b are strings. Also need to return string.
+Given two binary strings, return their sum (also a binary string).
+
+For example,
+a = "11"
+b = "1"
+Return "100".
+
+Tags: Math String
+Similar Problems: (M) Add Two Numbers (M) Multiply Strings (E) Plus One (E) Add Binary
+
+
+
 
 idea: from the back, do addition sequentially.
 Be careful with the carry.
@@ -38,6 +49,7 @@ def addBinary(a, b):
     
     if c == 1:
         result.insert(0, str(c))
+    print result
     return ''.join(result)
 
 
@@ -74,5 +86,7 @@ def addBinary2(a, b):
 
 a = "11"
 b = "1"
-
+c = '0'
+d = '0'
+print addBinary(c,d)
 print addBinary2(a,b)

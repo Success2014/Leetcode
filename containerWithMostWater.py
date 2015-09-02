@@ -8,6 +8,8 @@ line i is at (i, ai) and (i, 0). Find two lines, which together
 with x-axis forms a container, such that the container contains the most water.
 
 Note: You may not slant the container.
+Tags: Array Two Pointers
+Similar Problems: (H) Trapping Rain Water
 
 
 @author: Neo

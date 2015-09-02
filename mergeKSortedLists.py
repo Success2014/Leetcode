@@ -43,7 +43,7 @@ class Solution:
         curr = head
         while heap:
             pop = heapq.heappop(heap)
-            curr.next = ListNode(pop[0])
+            curr.next = ListNode(pop[0])# or =pop[1]
             curr = curr.next
             if pop[1].next:
                 heapq.heappush(heap, (pop[1].next.val, pop[1].next))

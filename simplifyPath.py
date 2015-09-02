@@ -2,8 +2,27 @@
 """
 Created on Tue Jun 09 14:48:41 2015
 
+Given an absolute path for a file (Unix-style), simplify it.
+
+For example,
+path = "/home/", => "/home"
+path = "/a/./b/../../c/", => "/c"
+click to show corner cases.
+
+Corner Cases:
+Did you consider the case where path = "/../"?
+In this case, you should return "/".
+Another corner case is the path might contain multiple slashes '/' together, 
+such as "/home//foo/".
+In this case, you should ignore redundant slashes and return "/home/foo".
+Hide Tags Stack String
+
+
+
+
 解题思路：
-题目的要求是输出Unix下的最简路径，Unix文件的根目录为"/"，"."表示当前目录，".."表示上级目录。
+题目的要求是输出Unix下的最简路径，Unix文件的根目录为"/"，"."表示当前目录，".."
+表示上级目录。
 例如：
 输入1：
 /../a/b/c/./.. 
@@ -20,13 +39,6 @@ Created on Tue Jun 09 14:48:41 2015
 
 使用一个栈来解决问题。遇到'..'弹栈，遇到'.'不操作，其他情况下压栈。
 
-
-Corner Cases:
-Did you consider the case where path = "/../"?
-In this case, you should return "/".
-Another corner case is the path might contain multiple slashes '/' together, 
-such as "/home//foo/".
-In this case, you should ignore redundant slashes and return "/home/foo".
 
 
 @author: Neo

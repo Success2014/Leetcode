@@ -17,10 +17,15 @@ standard operations of a stack.
 You may assume that all operations are valid (for example, no pop or peek 
 operations will be called on an empty queue).
 
+Tags: Stack Data Structure
+Similar Problems (E) Implement Stack using Queues
+
+
 
 @author: Neo
 """
 
+"""这个方法是错的。没有用stack来实现queue"""
 class Queue:
     # initialize your data structure here.
     def __init__(self):
@@ -49,7 +54,8 @@ class Queue:
 elements, and one output stack, from which I peek/pop. I move elements from 
 input stack to output stack when needed, i.e., when I need to peek/pop but 
 the output stack is empty. When that happens, I move all elements from input 
-to output stack, thereby reversing the order so it's the correct order for peek/pop.
+to output stack, thereby reversing the order so it's the correct order for 
+peek/pop.
 
 The loop in peek does the moving from input to output stack. Each element only 
 ever gets moved like that once, though, and only after we already spent time 

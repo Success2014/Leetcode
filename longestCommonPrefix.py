@@ -2,6 +2,12 @@
 """
 Created on Wed Jun 03 10:24:46 2015
 
+Write a function to find the longest common prefix string amongst 
+an array of strings.
+
+Tags: String
+
+
 idea: scan it brutally
 
 @author: Neo

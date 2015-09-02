@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 Created on Sat Jun 20 15:23:08 2015
 
@@ -62,6 +62,111 @@ class Solution:
             return self.helper(node1.left, node2.right) and self.helper(node1.right, node2.left)
         return False
         
+        
+    """
+    iterative soluton, use two queues, traverse the tree using BFS
+    """        
+    def isSymmetricIter(self, root):
+        if not root:
+            return True
+        
+        node1 = root.left
+        node2 = root.right
+        
+        q1 = [node1] # queue1, all the left children
+        q2 = [node2] # queue2, all the right children
+        while q1 and q2: # not return True until queues are both empty
+            p1 = q1.pop(0)
+            p2 = q2.pop(0)            
+            if p1 is None and p2 is None:
+                continue
+            if p1 is None and p2 is not None:
+                return False
+            if p1 is not None and p2 is None:
+                return False
+            if p1.val != p2.val:
+                return False
+            
+            if p1.left is not None: # notice the order
+                q1.append(p1.left)                            
+            if p2.right is not None:
+                q2.append(p2.right)          
+            if p1.right is not None:
+                q2.append(p1.right)
+            if p2.left is not None:
+                q1.append(p2.left)            
+        
+        if len(q1) != len(q2):
+            return False
+        return True
+    
+    
+    """
+    iterative soluton, use two stacks, traverse the tree using DFS
+    """        
+    def isSymmetricIterS(self, root):
+        if not root:
+            return True
+        
+        node1 = root.left
+        node2 = root.right
+        
+        s1 = [node1] # stack1, all the left children
+        s2 = [node2] # stack2, all the right children
+        
+        while s1 and s2:
+            p1 = s1.pop()
+            p2 = s2.pop()
+            
+            if p1 is None and p2 is None:
+                continue
+            if p1 is not None and p2 is None:
+                return False
+            if p1 is None and p2 is not None:
+                return False
+            if p1.val != p2.val:
+                return False
+                
+            if p1.left: # notice the order
+                s1.append(p1.left)
+            if p2.right:
+                s2.append(p2.right)
+            if p1.right:
+                s2.append(p1.right)
+            if p2.left:
+                s1.append(p2.left)
+        
+        if len(s1) != len(s2):
+            return False
+        return True
+    
+    
+    def isSymmetric2(self, root):
+        """写法更简洁"""
+        if not root:
+            return True
+        q1 = [root.left]
+        q2 = [root.right]
+        
+        while q1 and q2:
+            p1 = q1.pop(0)
+            p2 = q2.pop(0)
+            
+            if p1 is None and p2 is None:
+                continue
+            if p1 is None or p2 is None:
+                return False
+            
+            if p1.val == p2.val:
+                q1.append(p1.left)
+                q2.append(p2.right)
+                q1.append(p1.right)
+                q2.append(p2.left)
+            else:
+                return False
+        
+        return True
+        
 
 node1 = TreeNode(1)
 node2 = TreeNode(2)
@@ -79,12 +184,12 @@ node3.left = node6
 node3.right = node7
 
 sol = Solution()
-print sol.isSymmetric([])
+print sol.isSymmetricIterS(node1)
 
 
 
 
-
+#http://blog.csdn.net/disappearedgod/article/details/24153001
 
 
 

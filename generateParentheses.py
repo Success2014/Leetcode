@@ -9,6 +9,13 @@ For example, given n = 3, a solution set is:
 
 "((()))", "(()())", "(())()", "()(())", "()()()"
 
+Tags: Backtracking String
+Similar Problems (M) Letter Combinations of a Phone Number 
+(E) Valid Parentheses
+
+idea:
+列举出所有合法的括号匹配，使用dfs。
+如果左括号的数量大于右括号的数量的话，就不能产生合法的括号匹配。
 
 @author: Neo
 """
@@ -24,6 +31,7 @@ class Solution:
         return res
     
     def helper(self, l, r, string, res):
+        """l是左括号剩余数量，r是右括号剩余数量"""
         if r < l: # discard ')('
             return
         if l == 0 and r == 0:

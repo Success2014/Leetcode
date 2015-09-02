@@ -6,6 +6,10 @@ A linked list is given such that each node contains an additional random
 pointer which could point to any node in the list or null.
 Return a deep copy of the list.
 
+Tags: Hash Table Linked List
+Similar Problems: (M) Clone Graph
+
+
 
 idea:
 http://www.cnblogs.com/zuoyuan/p/3745126.html
@@ -29,6 +33,8 @@ class Solution:
         output. So IMHO, it is correct to say that the space complexity is O(1).
         https://leetcode.com/discuss/22421/solution-constant-space-complexity-linear-time-complexity
         http://www.cnblogs.com/zuoyuan/p/3745126.html
+        每个节点后面加一个一样的节点。原链表中的random指针如何映射呢？
+        一条语句：tmp.next.random = tmp.random.next
         """
         if not head:
             return head
@@ -54,8 +60,8 @@ class Solution:
             pold = pold.next
             pnew.next = pold.next
             pnew = pnew.next
-        pold.next = None
-        pnew.next = None
+        pold.next = None #若没有这行，输入只有一个节点{1}时，下一个节点还是copied node
+#        pnew.next = None
         return newhead
     
     def copyRandomList2(self, head):

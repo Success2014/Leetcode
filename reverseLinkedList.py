@@ -33,6 +33,15 @@ class Solution:
             curt = nxt # tracking
         head = prev
         return head
+    def reverseList2(self, head):
+        """idea与上面一样，更简洁的实现。每次都只翻转一个指针。"""
+        prev = None
+        while head:
+            tmp = head.next
+            head.next = prev
+            prev = head
+            head = tmp
+        return prev
     
     def reverseList_rec(self, head): # recursive solution
         return self._reverse(head)

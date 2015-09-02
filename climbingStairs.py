@@ -9,6 +9,9 @@ Created on Fri Jun 05 12:20:13 2015
 然后跨1个台阶。所以f(n) = f(n-1) + f(n-2)。
 f(1)=1, f(2)=2.为了方便定义f(0)=1.
 
+Tags: Dynamic Programming
+
+
 @author: Neo
 """
 

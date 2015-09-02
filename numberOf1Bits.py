@@ -8,6 +8,10 @@ Write a function that takes an unsigned integer and returns the number of
 For example, the 32-bit integer ’11' has binary representation 
 00000000000000000000000000001011, so the function should return 3.
 
+Tags: Bit Manipulation
+Similar Problems (E) Reverse Bits (E) Power of Two
+
+
 Brute force solution:
 Iterate 32 times, each time determining if the ith bit is a ‘1’ or not. 
 This is probably the easiest solution, and the interviewer would probably 

@@ -21,7 +21,9 @@ class Solution:
     # @param {integer[]} nums
     # @return {integer}
     def rob(self, nums):
-        """做两次实验。第一次抛开第一家，第二次抛开最后一家，然后看怎样最大。"""
+        """做两次实验。第一次抛开第一家，第二次抛开最后一家，然后看怎样最大。
+        原因是最优结果肯定要么在0:n-1这个范围，要么在1:n这个范围产生。
+        注意判断一下只有一间房子的情况"""
         if not nums:
             return 0
         if len(nums)==1:

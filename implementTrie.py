@@ -13,7 +13,11 @@ Similar Problems: (M) Add and Search Word - Data structure design
 
 Trie使用孩子表示法存储，TrieNode为字典树的节点，包含属性childs和isWord。
 
-其中childs为dict，存储当前节点的后代节点；isWord为布尔值，表示当前节点是否存储了一个单词。
+其中childs为dict，存储当前节点的后代节点；isWord为布尔值，表示当前节点是否存储了一
+个单词。
+
+Tags: Data Structure Trie
+Similar Problems (M) Add and Search Word - Data structure design
 
 
 @author: Neo

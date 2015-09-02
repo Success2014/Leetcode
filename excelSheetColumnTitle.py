@@ -16,6 +16,7 @@ For example:
     28 -> AB 
 
 idea:
+像进制转换
 使用Python解题时，需要使用ord()函数将字母转化为整数，使用chr()函数将整数转化回字母
 
 @author: Neo
@@ -33,6 +34,8 @@ class Solution:
 
 sol = Solution()    
 print sol.convertToTitle(28)
+print sol.convertToTitle(38)
+print sol.convertToTitle(1000)
 
 
 

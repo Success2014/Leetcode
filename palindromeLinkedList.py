@@ -7,6 +7,9 @@ Given a singly linked list, determine if it is a palindrome.
 Follow up:
 Could you do it in O(n) time and O(1) space?
 
+Tags: Linked List, Two Pointers
+Similar Problems:
+(E) Palindrome Number (E) Valid Palindrome (E) Reverse Linked List
 
 
 @author: Neo
@@ -42,7 +45,7 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
         # reverse from the middle    
-        mid = slow.next
+        mid = slow.next#无论链表长度奇偶，都是这个数开始翻转
         prev = None
         while mid:
             nxt = mid.next

@@ -14,7 +14,11 @@ Have you consider that the string might be empty? This is a good question to
 ask during an interview.
 For the purpose of this problem, we define empty string as valid palindrome.
 
-idea: remember to convert to lower case
+Tags: Two Pointers String
+Similar Problems (E) Palindrome Linked List
+
+
+idea: two pointers, one left, one right. remember to convert to lower case
 
 @author: Neo
 """

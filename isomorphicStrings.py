@@ -16,10 +16,13 @@ Given "paper", "title", return true.
 Note:
 You may assume both s and t have the same length.
 
+Tag: Hash Table
+
 idea:
 创建两个字典来反映两个字符串中的映射关系,当映射关系不等时则返回False.
 否则"ab","aa"要出错。
-不一定要2个字典，如方法3，通过逻辑判断，s[i]不在dict的key中，t[i]也应该不在dict的value中
+不一定要2个字典，如方法3，通过逻辑判断，s[i]不在dict的key中，
+t[i]也应该不在dict的value中
 
 @author: Neo
 """
@@ -65,6 +68,7 @@ class Solution:
         return True
     
     def isIsomorphic3(self, s, t):
+        """这个方法在OJ上速度最快，而且最省空间"""
         if s == t:
             return True
         dic = {}

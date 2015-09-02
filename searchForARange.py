@@ -45,8 +45,10 @@ class Solution:
                 L = M + 1
             elif nums[M] > target:
                 R = M - 1
-            else: #nums[M] = target
+            else: #nums[M]=target往左边走
                 R = M - 1
+        #判断是否超出边界，上面的句子是相等造成的R=M-1还是大于造成的
+        #不判断是否超出边界的话，[2,2],3会报错
         if L < n and nums[L] == target:
             return L
         return -1
@@ -61,8 +63,9 @@ class Solution:
                 L = M + 1
             elif nums[M] > target:
                 R = M - 1
-            else: #nums[M] = target
+            else: #nums[M]=target往右边走
                 L = M + 1
+        #不判断是否超出边界的话，[4,4],3会报错
         if R < n and nums[R] == target:
             return R
         return -1

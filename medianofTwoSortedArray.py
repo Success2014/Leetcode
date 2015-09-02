@@ -28,7 +28,7 @@ def getKth(A, B, k):
         
     if lenA == 0:
         if lenB == 0:
-            raise ValueError("Both arrays are of lenth 0!")
+            raise ValueError("Both arrays are of length 0!")
         return B[k - 1]
     
     if k == 1:

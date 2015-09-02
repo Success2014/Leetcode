@@ -19,6 +19,11 @@ There is one obstacle in the middle of a 3x3 grid as illustrated below.
 The total number of unique paths is 2.
 
 Note: m and n will be at most 100.
+Tags: Array Dynamic Programming
+Similar Problems (M) Unique Paths
+
+
+
 
 @author: Neo
 """

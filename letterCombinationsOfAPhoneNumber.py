@@ -11,6 +11,11 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 Although the above answer is in lexicographical order, your answer could 
 be in any order you want.
 
+Tags: Backtracking String
+Similar Problems (M) Generate Parentheses (M) Combination Sum
+
+
+
 Idea:
 用brute force recursive.
 'a': ad, ae, af

@@ -9,6 +9,11 @@ For example,
 Given 1->1->2, return 1->2.
 Given 1->1->2->3->3, return 1->2->3.
 
+Tag: Linked List
+
+idea:
+如果遇到重复则把当前节点的next指向下一个的next,并且保持当前节点不动。
+如果没有重复，则当前节点到下一个节点。
 
 @author: Neo
 """

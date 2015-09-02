@@ -27,8 +27,25 @@ def plusOne(digits):
     
     result.reverse()
     return result
+
+
+def plusOne2(digits):
+    """不需要carry这个东西。如果当前数小于9则加1返回；否则当前位置0，前一位继续加1。
+    到第一位都没有返回的话，说明是99..9这样序列，再加一个1"""
+    for i in xrange(len(digits)-1, -1, -1):
+        d = digits[i]
+        if d < 9:
+            digits[i] = d + 1
+            return digits
+        else:
+            digits[i] = 0
+    digits.insert(0, 1)
+    return digits #如果直接return digits.insert(0,1)会出错
         
         
-digits = [1,9,9]
-print plusOne(digits)
+        
+#digits = [1,9,9]
+#print plusOne2(digits)
+digits =[9,9,9]
+print plusOne2(digits)
     

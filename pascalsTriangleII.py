@@ -27,11 +27,17 @@ class Solution:
             return [1,1]
         
         res = [1,1]
-        for i in xrange(1, rowIndex): # number of repeated calculation
-            for j in xrange(i,0,-1): # j could be len(res)
-                res[j] = res[j] + res[j-1]
+        for i in xrange(rowIndex-1): # number of repeated calculation
+            for j in xrange(len(res)-1,0,-1): #只算到第0个数前
+                res[j] += res[j-1]
             res.append(1)
         return res
+        
+#        for i in xrange(1, rowIndex): # number of repeated calculation
+#            for j in xrange(i,0,-1): # j could be len(res)
+#                res[j] = res[j] + res[j-1]
+#            res.append(1)
+#        return res
     
     def getRow2(self, rowIndex):
         if rowIndex == 0:

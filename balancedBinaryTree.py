@@ -7,6 +7,13 @@ Given a binary tree, determine if it is height-balanced.
 For this problem, a height-balanced binary tree is defined as a binary tree in 
 which the depth of the two subtrees of every node never differ by more than 1.
 
+
+Tag: Tree Depth-first Search
+Similar Problems: (E) Maximum Depth of Binary Tree
+
+
+
+
 idea:
 在这道题里，平衡二叉树的定义是二叉树的任意节点的两颗子树之间的高度差小于等于1。
 这实际上是AVL树的定义。首先要写一个计算二叉树高度的函数，二叉树的高度定义为：
@@ -42,7 +49,8 @@ public:
         int left=depth(root->left);
         int right=depth(root->right);
 
-        return abs(left - right) <= 1 && isBalanced(root->left) && isBalanced(root->right);
+        return abs(left - right) <= 1 && isBalanced(root->left) 
+        && isBalanced(root->right);
     }
 };
 For the current node root, calling depth() for its left and right children 

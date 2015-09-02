@@ -8,6 +8,10 @@ Find the minimum element.
 
 You may assume no duplicate exists in the array.
 
+Tags: Array Binary Search
+Similar Problems (H) Search in Rotated Sorted Array 
+(H) Find Minimum in Rotated Sorted Array II
+
 
 @author: Neo
 """
@@ -16,7 +20,7 @@ class Solution:
     # @param {integer[]} nums
     # @return {integer}
     def findMin(self, nums):
-        """思路参考handbook"""
+        """思路参考handbook, O(logn) time complexity. 丢掉大的这一边"""
         
         L = 0
         R = len(nums) - 1
@@ -33,3 +37,4 @@ class Solution:
 sol = Solution()    
 print sol.findMin([6,7,1,2,3,4,5])
 print sol.findMin([4,5,6,7,1,2,3])
+print sol.findMin([1,3])

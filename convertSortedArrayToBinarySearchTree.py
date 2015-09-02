@@ -5,6 +5,9 @@ Created on Wed Jul 01 17:17:44 2015
 Given an array where elements are sorted in ascending order, 
 convert it to a height balanced BST.
 
+Tags: Tree Depth-first Search
+Similar Problems: (M) Convert Sorted List to Binary Search Tree
+
 
 @author: Neo
 """
